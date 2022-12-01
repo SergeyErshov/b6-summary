@@ -1,0 +1,17 @@
+---
+- name: install docker and postgresql
+  hosts: all
+  gather_facts: false
+  become: true
+  become_user: "root"
+  become_method: "sudo"
+
+  vars_files:
+    - "/home/esm/ansible/playbooks/b6-summary/ansible/playbook/tasks/group_vars/database/postgres"
+
+  tasks:
+    - include_tasks: "./app.yml"
+      when: "'app' in group_names"
+
+    - include_tasks: "./database.yml"
+      when: "'database' in group_names"

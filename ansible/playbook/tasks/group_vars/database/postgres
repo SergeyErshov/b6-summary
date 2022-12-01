@@ -1,0 +1,9 @@
+# set variables for settings postgres on host group database
+---
+pg_version: "12"
+
+postgresql_global_config_options:
+  - option: data_directory
+    value: "/opt/postgres-{{ pg_version }}"
+
+postgresql_data_dir: "/opt/postgres-{{ pg_version }}"	

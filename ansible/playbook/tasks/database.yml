@@ -1,0 +1,10 @@
+- name: install postgres defined versions
+  apt:
+    name: "postgresql-{{ pg_version }}"
+    state: "present"
+    update_cache: true
+
+- name: strarting postgresql
+  service:
+    name: "postgresql.service"
+    state: "started"
