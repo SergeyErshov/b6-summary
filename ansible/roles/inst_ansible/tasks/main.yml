@@ -1,2 +1,6 @@
 ---
 # tasks file for inst_ansible
+- name: installing ansible
+  apt:
+    name: ansible
+    update_cache: true

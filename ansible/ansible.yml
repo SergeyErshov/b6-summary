@@ -1,0 +1,10 @@
+---
+- name: installing ansible to vm1
+  hosts: web
+  gather_facts: true
+  become: true
+  become_user: "root"
+  become_method: "sudo"
+
+  roles:
+    - role: "/home/esm/ansible/playbooks/b6-summary/ansible/roles/inst_ansible"
