@@ -1,0 +1,7 @@
+---
+# tasks file for pushpub
+- name: export public ssh-key to vm2 and vm3
+  authorized_key:
+    user: "{{ user }}"
+    state: "present"
+    key: "{{ lookup('file', '/home/esm/ansible/playbooks/b6-summary/ansible/roles/users/meta/pub-62.84.126.115'}}"
