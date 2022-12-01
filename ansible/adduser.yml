@@ -1,6 +1,6 @@
 ---
 - name: add user to vm1
-  hosts: web
+  hosts: b6_all
   gather_facts: false
   become: true
   become_user: "root"
