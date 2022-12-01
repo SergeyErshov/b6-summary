@@ -1,7 +1,7 @@
 ---
 - name: add user to vm1
   hosts: b6_all
-  gather_facts: false
+  gather_facts: true
   become: true
   become_user: "root"
   become_method: "sudo"

@@ -9,4 +9,9 @@
     ssh_key_file: "/home/{{ user }}/.ssh/id_ecdsa"
     ssh_key_type: "ECDSA"
     state: "present"
-      
+     
+- name: fetch pub key to local
+  fetch:
+    src: "/home/{{ user }}/.ssh/id_ecdsa.pub"
+    dest: "/home/esm/ansible/playbooks/b6-summary/ansible/roles/users/meta/pub-{{ inventory_hostname }}"
+    flat: true 
