@@ -24,7 +24,7 @@ resource "yandex_compute_instance" "vm" {
   }
 
   metadata = {
-    user-data          = "${file("/home/esm/ansible/playbooks/b6-pract/terraform/.metadata/yc_users.txt")}"
+    user-data          = "${file("/home/esm/ansible/playbooks/b6-summary/terraform/.metadata/yc_users.txt")}"
     serial-port-enable = 1
   }
 }
